@@ -6,11 +6,16 @@
 trigger:
 - master
 
+variables: # declare variales at root level
+  name: jyotsna
+  age: 27
+
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- bash: echo $NAME
+- bash: echo $(name) # use the variable
+- bash: echo $(age)
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
