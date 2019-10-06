@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- bash: echo $name
+- bash: echo $NAME
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
